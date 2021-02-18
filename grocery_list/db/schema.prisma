@@ -70,3 +70,11 @@ model Item {
   updatedAt DateTime @updatedAt
   name      String
 }
+
+model List {
+  id        Int      @default(autoincrement()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String   
+  items     Item[]   
+}
